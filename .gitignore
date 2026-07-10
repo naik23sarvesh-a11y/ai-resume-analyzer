@@ -1,12 +1,17 @@
 # =========================
 # Dependencies
 # =========================
-node_modules/
 
+node_modules/
+.env
+client/node_modules/
+server/node_modules/
+server/.env
+client/.env
+dist/
 # =========================
 # Environment Variables
 # =========================
-.env
 .env.local
 .env.development
 .env.production
@@ -14,7 +19,6 @@ node_modules/
 # =========================
 # Build folders
 # =========================
-dist/
 build/
 
 # =========================

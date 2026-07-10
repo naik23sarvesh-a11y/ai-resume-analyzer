@@ -10,7 +10,12 @@ import resumeRoutes from "./routes/resumeRoutes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  })
+);
 
 app.use(helmet());
 
@@ -28,6 +33,13 @@ app.get("/", (req, res) => {
   res.json({
     success: true,
     message: "AI Resume Analyzer API Running",
+  });
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    status: "OK",
   });
 });
 

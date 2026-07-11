@@ -18,6 +18,8 @@ import ResumeInfoCard from "@/components/dashboard/ResumeInfoCard";
 
 import JobMatcherCard from "@/components/dashboard/JobMatcherCard";
 
+import AnalysisSkeleton from "@/components/analysis/AnalysisSkeleton";
+
 
 
 export default function DashboardPage() {
